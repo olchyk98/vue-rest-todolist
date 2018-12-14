@@ -1,5 +1,5 @@
 const app = require('express')();
-const router = require('./router');
+const api = require('./api');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
@@ -11,7 +11,7 @@ mongoose.connection.once('open', () => console.log("The API server was successfu
 
 // Load deps.
 app.use(bodyParser.json());
-app.use(router);
+app.use(api);
 
 // Start.
 app.listen(4000, () => console.log("Server is listening on port 4000!"));
