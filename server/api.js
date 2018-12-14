@@ -57,6 +57,7 @@ router.post('/todos', async (req, res) => {
 
 router.put('/todos/:id', async (req, res) => {
 	let { content, isDone } = req.body;
+	console.log(content, isDone, req.body);
 
 	let a = {}
 	if(typeof content !== "undefined") a.content = content;

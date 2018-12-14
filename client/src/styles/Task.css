@@ -94,3 +94,9 @@
 	background:#dda66d;
 	border:1px solid #b6821a;
 }
+
+.app-new {
+	display:flex;
+	flex-direction:column;
+	align-items:flex-end;
+}

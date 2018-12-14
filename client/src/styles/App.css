@@ -11,3 +11,42 @@ html, body {
 	align-items:center;
 	justify-content:center;
 }
+
+.app-loader {
+	--size:15px;
+	--border:2px;
+
+	width:var(--size);
+	height:var(--size);
+	border:var(--border) solid red;
+	border-radius:2.5px;
+	margin-top:45px;
+	animation:app-loader-inf-am 5s infinite linear;
+}
+
+@keyframes app-loader-inf-am {
+	0% {
+		transform:rotate(0deg);
+		border:var(--border) solid red;
+	}
+	20% {
+		transform:rotate(72deg);
+		border:var(--border) solid blue;
+	}
+	40% {
+		transform:rotate(144deg);
+		border:var(--border) solid purple;
+	}
+	60% {
+		transform:rotate(216deg);
+		border:var(--border) solid rebeccapurple;
+	}
+	80% {
+		transform:rotate(288deg);
+		border:var(--border) solid green;
+	}
+	100% {
+		transform:rotate(360deg);
+		border:var(--border) solid red;
+	}
+}

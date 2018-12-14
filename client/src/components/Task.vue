@@ -28,7 +28,7 @@
 				type: Function,
 				default: () => null
 			},
-			id: {
+			_id: {
 				type: String,
 				default: () => {
 					throw new Error("Something went wrong during a Task component render");
@@ -43,7 +43,7 @@
 				}
 
 				this.updateTask({
-					id: this.id,
+					_id: this._id,
 					content: a,
 					isDone: this.isDone
 				});
@@ -52,18 +52,18 @@
 				let a = !this.isDone;
 
 				this.updateTask({
-					id: this.id,
+					_id: this._id,
 					content: this.content,
 					isDone: a
 				});
 			},
 			deleteT() {
-				this.deleteTask(this.id);
+				this.deleteTask(this._id);
 			}
 		}
 	}
 </script>
 
 <style>
-	@import './Task.css';
+	/*@import './styles/Task.css';*/
 </style>
