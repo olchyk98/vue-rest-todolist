@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/todos', async (req, res) => {
-	let a = await Task.find({});
+	let a = await Task.find({}).sort({ time: -1 });
 
 	pack(
 		'GET', 
